@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application - Users</title>
+    <link rel="stylesheet" href="users.css">
+</head>
+<body>
+
+    <div class="chat-container">
+
+        <!-- Left Sidebar: Users List 
+        <aside class="sidebar">
+
+            <div class="sidebar-header">
+                <h2>Chats</h2>
+                
+
+            <button class="menu-btn" id="menuBtn">⋮</button>
+
+        <div class="dropdown-menu" id="dropdownMenu" style="display: none;">
+            <button id="createGroupBtn">Create Group</button>
+        </div>
+         </div>
+            <div class="search-container">
+                <input
+                    type="text"
+                    id="searchUser"
+                    placeholder="Search users"
+                >
+            </div>
+
+             Database users will appear here 
+            <div class="users-list" id="usersList">
+            </div>
+
+        </aside>
+             -->
+
+          <!-- Left Sidebar: Users List -->
+<aside class="sidebar">
+
+    <div class="sidebar-header">
+        <h2>Chats</h2>
+
+        <div class="menu-wrapper">
+            <button class="menu-btn" id="menuBtn">⋮</button>
+
+            <div class="dropdown-menu" id="dropdownMenu" style="display: none;">
+                <button id="createGroupBtn">Create Group</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="search-container">
+        <input
+            type="text"
+            id="searchUser"
+            placeholder="Search users"
+        >
+    </div>
+
+    <!-- Database users will appear here -->
+    <div class="users-list" id="usersList"></div>
+
+</aside>
+
+
+        <!-- Right Side: Chat Panel -->
+        <main class="chat-panel">
+
+            <!-- Initial state before selecting a user -->
+            <div class="empty-chat" id="emptyChat">
+                <div class="chat-icon">💬</div>
+                <h2>Select a user to start chatting</h2>
+                <p>Choose a conversation from the list</p>
+            </div>
+
+            <!-- Selected user's chat header -->
+            <div class="chat-header" id="chatHeader">
+                <div class="user-avatar" id="selectedUserAvatar">U</div>
+                <div class="user-info">
+                    <h3 id="selectedUserName">User Name</h3>
+                    <p>Online</p>
+                </div>
+            </div>
+
+            <!-- Messages will appear here later -->
+            <div class="messages-container" id="messagesContainer"></div>
+
+            <!-- Message input will be used later 
+            <form class="message-form" id="messageForm">
+                <input
+        type="file"
+        id="mediaInput"
+        accept="image/*,video/*,audio/*,.pdf,.doc,.docx"
+        hidden
+    />
+      Selected media preview 
+    <div id="mediaPreview" class="media-preview" style="display: none;">
+        <img id="previewImage" alt="Selected image preview">
+        <span id="previewFileName"></span>
+        <button type="button" id="removeMediaBtn">×</button>
+    </div>
+
+    <button
+        type="button"
+        id="attachMediaBtn"
+        class="attach-media-btn"
+        title="Attach media"
+    >
+        📎
+    </button>
+                <input
+                    type="text"
+                    id="messageInput"
+                    placeholder="Type a message"
+                >
+                <button type="submit">➤</button>
+            </form>
+        -->
+            
+<form class="message-form" id="messageForm">
+
+    <input
+        type="file"
+        id="mediaInput"
+        accept="image/*,video/*,audio/*,.pdf,.doc,.docx"
+        hidden
+    />
+
+    <!-- Selected media preview -->
+    <div id="mediaPreview" class="media-preview" style="display: none;">
+        <img id="previewImage" alt="Selected image preview">
+        <span id="previewFileName"></span>
+        <button type="button" id="removeMediaBtn">×</button>
+    </div>
+
+    <!-- Message input row -->
+    <div class="message-input-row">
+        <button
+            type="button"
+            id="attachMediaBtn"
+            class="attach-media-btn"
+            title="Attach media"
+        >📎</button>
+
+        <input
+            type="text"
+            id="messageInput"
+            placeholder="Type a message"
+        >
+
+        <button type="submit">➤</button>
+    </div>
+
+</form>
+
+
+        </main>
+
+    </div>
+
+  <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@1.18.0/dist/axios.min.js"></script>
+<script src="users.js"></script>
+</body>
+</html>

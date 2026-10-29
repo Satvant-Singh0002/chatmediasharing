@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application - Create Group</title>
+    <link rel="stylesheet" href="creategroup.css">
+</head>
+<body>
+
+    <div class="group-container">
+
+        <!-- Header -->
+        <header class="group-header">
+            <button class="back-btn" id="backBtn" title="Back">←</button>
+            <h2>Create Group</h2>
+        </header>
+
+        <!-- Group name -->
+        <div class="group-name-box">
+            <input
+                type="text"
+                id="groupName"
+                placeholder="Group name"
+                maxlength="50"
+            >
+        </div>
+
+        <!-- Search -->
+        <div class="search-container">
+            <input
+                type="text"
+                id="searchUser"
+                placeholder="Search users"
+            >
+        </div>
+
+        <!-- Selected count -->
+        <div class="selected-info">
+            <span id="selectedCount">0</span> selected
+        </div>
+
+        <!-- Users list with checkboxes -->
+        <div class="users-list" id="usersList"></div>
+
+        <!-- Error / status message -->
+        <p class="group-error" id="groupError"></p>
+
+        <!-- Footer -->
+        <footer class="group-footer">
+            <button class="create-btn" id="createBtn">Create Group</button>
+        </footer>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.18.0/dist/axios.min.js"></script>
+    <script src="Creategroup.js"></script>
+</body>
+</html>

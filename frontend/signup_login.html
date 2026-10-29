@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign-up-login-page</title>
+    <link rel="stylesheet"href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box login">
+            <form id="loginForm" action="">
+                <h1>login</h1>
+                <div class="input-box">
+                    <input id="emailorphone" type="text" placeholder="email or phone" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <div class="input-box">
+                    <input id="loginPassword" type="password" placeholder="Password"required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <div class="forgot-link">
+                    <a href="#">Forgot password</a>
+
+                </div>
+                <button type="submit" class="btn"id="loginBtn">login</button>
+                <p>or login with social media platform</p>
+                <div class="social-icons">
+                    <a href="#" class="google"><i class='bx bxl-google'></i></a>
+                </div>
+
+            </form>
+        </div>
+        <div class="form-box sign-up">
+            <form id="signupForm" active>
+                <h1>sign up</h1>
+                <div class="input-box">
+                    <input type="text" id="name"placeholder="Username" required>
+                    <i class="bx bxs-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="email"id="email"placeholder="email" required>
+                    <i class="bx bxs-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="tel" id="phone" placeholder="phone" required>
+                    <i class="bx bxs-phone" ></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="password" placeholder="password"required>
+                    <i class="bx bxs-lock-alt"></i>
+                </div>
+                <button type="submit" class="btn"id="signupBtn">SignUp</button>
+                 <p>or SignUp with social media platform</p>
+                <div class="social-icons">
+                    <a href="#" class="google"><i class='bx bxl-google'></i></a>
+                </div>
+            </form>
+        </div>
+        <div class="toggle-box">
+            <div class="toggle-panel toggle-left">
+                <h1>Hello,Welcome</h1>
+                <p>Don't have an account?</p>
+                <button type="button" class="btn signup-btn">SignUp</button>
+            </div>
+            <div class="toggle-panel toggle-right">
+                <h1>Welcome Back!</h1>
+                <p>Already have an account?</p>
+                <button type="button" class="btn login-btn">login</button>
+            </div>
+        </div>
+
+
+    </div>
+<script src="
+https://cdn.jsdelivr.net/npm/axios@1.18.0/dist/axios.min.js
+"></script>
+    <script src="script.js"></script>
+</body>
+</html>
